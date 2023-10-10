@@ -130,7 +130,7 @@ func (gp *GpsAdapter) SetImei(gps_id int, imei string) error {
 func (gp *GpsAdapter) InsertEvent(gps_id int, message map[string]string) error {
 	var statement string
 	now := time.Now()
-	statement = "Insert into ievents_" + fmt.Sprintf("%d%02d",
+	statement = "Insert into events_" + fmt.Sprintf("%d%02d",
 		now.Year(), now.Month()) + "  set "
 	for key, value := range message {
 		statement = statement + " " + key + " = '" + value + "' , "

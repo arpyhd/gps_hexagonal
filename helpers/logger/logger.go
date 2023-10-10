@@ -1,8 +1,8 @@
 package logger
 
 import (
-//	"flag"
-	"go/build"
+	//	"flag"
+
 	"log"
 	"os"
 )
@@ -13,9 +13,9 @@ var (
 
 func init() {
 	// set location of log file
-	var logpath = build.Default.GOPATH + "/gps_hexagonal/gps_gpshexagonal.log"
+	var logpath = "gps_gpshexagonal.log"
 
-//	flag.Parse()
+	//	flag.Parse()
 	//var file, err1 = os.Create(logpath)
 	file, err1 := os.OpenFile(logpath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
